@@ -7,38 +7,38 @@
   <title>Espoon Putki & Saneeraus Oy | Putkimies Espoo</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔧</text></svg>">
 </head>
 <body>
-  <!-- Hätäpalkki -->
-  <div class="emergency-bar">
-    <span class="emergency-bar__pulse"></span>
-    <span>24/7 Putkipäivystys – Soita heti:</span>
-    <a href="tel:0505546665">Markku 050 554 6665</a>
-    <span class="emergency-bar__sep">|</span>
-    <a href="tel:0400996843">Jani 040 099 6843</a>
+  <!-- Yläpalkki -->
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <span class="topbar__badge">24/7 Päivystys</span>
+      <a href="tel:0505546665" class="topbar__phone">050 554 6665</a>
+      <span class="topbar__label">Putkityöt – Markku</span>
+      <span class="topbar__sep">|</span>
+      <a href="tel:0400996843" class="topbar__phone">040 099 6843</a>
+      <span class="topbar__label">Saneeraus – Jani</span>
+    </div>
   </div>
 
-  <!-- Navigaatio -->
+  <!-- Header -->
   <header class="header" id="header">
     <div class="container header__inner">
       <a href="#" class="logo">
-        <img
-          class="logo__image"
-          src="images/logo.png"
-          alt="Espoon Putki & Saneeraus Oy"
-          width="320"
-          height="80"
-        >
+        <img class="logo__image" src="images/logo.png" alt="Espoon Putki & Saneeraus Oy" width="320" height="80">
       </a>
       <nav class="nav" id="nav">
         <a href="#palvelut" class="nav__link">Palvelut</a>
-        <a href="#meista" class="nav__link">Meistä</a>
+        <a href="#arvostelut" class="nav__link">Arvostelut</a>
         <a href="#hinnoittelu" class="nav__link">Hinnoittelu</a>
         <a href="#yhteystiedot" class="nav__link">Yhteystiedot</a>
-        <a href="tel:0505546665" class="btn btn--primary nav__cta">Soita nyt</a>
+        <a href="tel:0505546665" class="btn btn--primary nav__cta">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          Soita nyt
+        </a>
       </nav>
       <button class="menu-toggle" id="menuToggle" aria-label="Avaa valikko" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -49,190 +49,280 @@
   <main>
     <!-- Hero -->
     <section class="hero">
-      <div class="hero__bg">
-        <img
-          class="hero__image"
-          src="images/hero-plumber.jpg"
-          alt="Putkimies korjaamassa putkistoa kylpyhuoneessa"
-          width="1920"
-          height="1280"
-          fetchpriority="high"
-        >
-        <div class="hero__gradient"></div>
-      </div>
-      <div class="container hero__content">
-        <div class="hero__badge">Yli 20 vuoden kokemus LVI-alalta</div>
-        <h1 class="hero__title">
-          Putkimies Espoo –<br>
-          <em>luotettavat LVI- ja saneerauspalvelut</em>
-        </h1>
-        <p class="hero__lead">
-          Täyden palvelun putkiliike Espoossa, Helsingissä ja Vantaalla. Hoidamme kaiken pienestä huoltotyöstä akuuttiin vuotokorjaukseen ja laajaan putkiremonttiin – kerralla kuntoon.
-        </p>
-        <div class="hero__actions">
-          <a href="tel:0505546665" class="btn btn--primary btn--lg">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-            Soita putkityöt
-          </a>
-          <a href="#palvelut" class="btn btn--outline btn--lg">Tutustu palveluihin</a>
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <h1 class="hero__title">
+            Täyden palvelun putkiliike.<br>
+            <span class="hero__title-accent">Yksi soitto riittää.</span>
+          </h1>
+          <p class="hero__lead">
+            LVI- ja saneerauspalvelut Espoossa, Helsingissä ja Vantaalla. Yli 20 vuoden kokemus – pienestä huoltotyöstä akuuttiin vuotokorjaukseen ja laajaan putkiremonttiin.
+          </p>
+          <div class="hero__cta-row">
+            <a href="tel:0505546665" class="btn btn--primary btn--lg hero__phone-btn">
+              <span class="hero__phone-number">050 554 6665</span>
+              <span class="hero__phone-sub">Putkityöt – Markku</span>
+            </a>
+            <a href="#yhteystiedot" class="btn btn--secondary btn--lg">Jätä yhteydenotto</a>
+          </div>
         </div>
-        <div class="hero__stats">
-          <div class="stat">
+        <div class="hero__image-wrap">
+          <img src="images/hero-plumber.jpg" alt="Putkimies töissä" width="640" height="480" fetchpriority="high">
+        </div>
+      </div>
+      <div class="container">
+        <div class="trust-row">
+          <div class="trust-item">
             <strong>24/7</strong>
-            <span>Päivystys</span>
+            <span>Putkipäivystys</span>
           </div>
-          <div class="stat">
-            <strong>3</strong>
-            <span>Kaupunkia</span>
-          </div>
-          <div class="stat">
+          <div class="trust-item">
             <strong>20+</strong>
             <span>Vuotta kokemusta</span>
           </div>
+          <div class="trust-item">
+            <strong>5,0</strong>
+            <span>Asiakasarvosana</span>
+          </div>
+          <div class="trust-item">
+            <strong>3</strong>
+            <span>Kaupunkia</span>
+          </div>
         </div>
+      </div>
+    </section>
+
+    <!-- Tilaus -->
+    <section class="order-section">
+      <div class="container order-grid">
+        <article class="order-card order-card--urgent">
+          <div class="order-card__icon">🚨</div>
+          <h2>Nopea apu</h2>
+          <p>Vuoto, viemäritukos tai muu hätätilanne? Soita heti – reagoimme nopeasti ympäri vuorokauden.</p>
+          <a href="tel:0505546665" class="btn btn--primary btn--full">Soita 050 554 6665</a>
+          <a href="tel:0400996843" class="order-card__alt-link">Saneeraus: 040 099 6843</a>
+        </article>
+        <article class="order-card">
+          <div class="order-card__icon">📅</div>
+          <h2>Sovi aika</h2>
+          <p>Remontti, asennus tai kartoitus? Jätä yhteydenotto – sovimme ajan ja laajuuden etukäteen.</p>
+          <a href="#yhteystiedot" class="btn btn--secondary btn--full">Jätä yhteydenotto</a>
+          <span class="order-card__note">Ilmainen kartoitus yli 4 tunnin töihin</span>
+        </article>
       </div>
     </section>
 
     <!-- Palvelut -->
     <section class="section" id="palvelut">
       <div class="container">
-        <div class="section__header">
+        <div class="section__header section__header--center">
           <span class="section__label">Palvelumme</span>
-          <h2 class="section__title">Monipuoliset putkityöt kaikkiin tarpeisiin</h2>
-          <p class="section__desc">Toteutamme kaikki käyttövesi-, lämmitys- ja viemärijärjestelmiin liittyvät asennus-, korjaus- ja huoltotyöt turvallisesti ja luotettavasti.</p>
+          <h2 class="section__title">Apua kaikkiin putki- ja saneeraustarpeisiin</h2>
         </div>
         <div class="services-grid">
-          <article class="service-card">
-            <div class="service-card__icon">
-              <svg viewBox="0 0 48 48" fill="none"><path d="M24 8v8M20 12h8M14 28c0-5.523 4.477-10 10-10s10 4.477 10 10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M18 32l-4 8h20l-4-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="24" cy="28" r="2" fill="currentColor"/></svg>
-            </div>
-            <h3>Vuotojen paikannus ja korjaukset</h3>
-            <p>Paikannamme vuodot ripeästi – hanat, wc-istuimet, sulkuventtiilit ja patteriverkoston pienkorjaukset vaurioiden minimoimiseksi.</p>
-          </article>
-          <article class="service-card">
-            <div class="service-card__icon">
-              <svg viewBox="0 0 48 48" fill="none"><path d="M16 20v-4a8 8 0 0116 0v4M12 20h24v16a4 4 0 01-4 4H16a4 4 0 01-4-4V20z" stroke="currentColor" stroke-width="2"/><path d="M20 28h8M24 24v8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-            </div>
-            <h3>Viemärin avaukset ja huollot</h3>
-            <p>Mekaaniset avaukset ja huuhtelut, hajuhaittojen selvitys sekä viemärilinjojen osittaiset uusinnat tarvittaessa.</p>
-          </article>
-          <article class="service-card">
-            <div class="service-card__icon">
-              <svg viewBox="0 0 48 48" fill="none"><rect x="10" y="14" width="28" height="24" rx="2" stroke="currentColor" stroke-width="2"/><path d="M18 14V10a6 6 0 0112 0v4M24 26v6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="24" cy="22" r="2" fill="currentColor"/></svg>
-            </div>
-            <h3>LVI-asennukset ja laitekytkennät</h3>
-            <p>Hanat, sekoittajat, wc-istuimet, lämminvesivaraajat sekä astianpesu- ja pyykinpesukoneiden vesiliitännät.</p>
-          </article>
-          <article class="service-card">
-            <div class="service-card__icon">
-              <svg viewBox="0 0 48 48" fill="none"><path d="M12 36V20a12 12 0 0124 0v16" stroke="currentColor" stroke-width="2"/><path d="M8 36h32M20 36v-8a4 4 0 018 0v8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="24" cy="16" r="3" stroke="currentColor" stroke-width="2"/></svg>
-            </div>
-            <h3>Lämmitysjärjestelmät</h3>
-            <p>Patteriverkoston ilmaus ja tasapainotus, kiertovesipumppujen vaihdot, termostaatit ja energiatehokkaat ratkaisut.</p>
-          </article>
-          <article class="service-card service-card--wide">
-            <div class="service-card__icon">
-              <svg viewBox="0 0 48 48" fill="none"><path d="M8 40V16l16-8 16 8v24" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><rect x="18" y="28" width="12" height="12" stroke="currentColor" stroke-width="2"/><path d="M24 20v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-            </div>
-            <div>
-              <h3>Saneerauspalvelut saman katon alta</h3>
-              <p>Kylpyhuone- ja keittiöremontit, rakennus- ja putkityöt samalta toimijalta. Ei aikatauluhaasteita eri urakoitsijoiden välillä – saumaton, laadukas lopputulos.</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Päivystys -->
-    <section class="cta-banner">
-      <div class="container cta-banner__inner">
-        <div class="cta-banner__content">
-          <h2>24/7 Putkipäivystys turvaa kiinteistösi</h2>
-          <p>Äkilliset putkirikot ja viemäritukokset eivät katso kelloa. Nopea paikalle saapuminen estää vesivahingot ja lisävauriot.</p>
-        </div>
-        <div class="cta-banner__phones">
-          <a href="tel:0505546665" class="phone-card">
-            <span class="phone-card__label">Putkityöt</span>
-            <strong>Markku Määttälä</strong>
-            <span class="phone-card__number">050 554 6665</span>
+          <a href="#yhteystiedot" class="service-tile">
+            <div class="service-tile__icon">💧</div>
+            <h3>Vuotokorjaukset</h3>
+            <p>Hanat, wc-istuimet, sulkuventtiilit ja patteriverkoston korjaukset</p>
           </a>
-          <a href="tel:0400996843" class="phone-card">
-            <span class="phone-card__label">Saneeraus</span>
-            <strong>Jani Kemppainen</strong>
-            <span class="phone-card__number">040 099 6843</span>
+          <a href="#yhteystiedot" class="service-tile">
+            <div class="service-tile__icon">🔧</div>
+            <h3>Viemärin avaukset</h3>
+            <p>Mekaaniset avaukset, huuhtelut ja viemärilinjojen osittaiset uusinnat</p>
+          </a>
+          <a href="#yhteystiedot" class="service-tile">
+            <div class="service-tile__icon">🚿</div>
+            <h3>LVI-asennukset</h3>
+            <p>Hanat, sekoittajat, lämminvesivaraajat ja kodinkoneiden liitännät</p>
+          </a>
+          <a href="#yhteystiedot" class="service-tile">
+            <div class="service-tile__icon">🌡️</div>
+            <h3>Lämmitys</h3>
+            <p>Patteriverkoston ilmaus, kiertovesipumput ja termostaatit</p>
+          </a>
+          <a href="#yhteystiedot" class="service-tile">
+            <div class="service-tile__icon">🏠</div>
+            <h3>Saneeraus</h3>
+            <p>Kylpyhuone- ja keittiöremontit, rakennus- ja putkityöt samalta toimijalta</p>
+          </a>
+          <a href="#yhteystiedot" class="service-tile">
+            <div class="service-tile__icon">🏢</div>
+            <h3>Taloyhtiöt</h3>
+            <p>Huoltotyöt, vikakorjaukset ja linjasaneeraukset isännöitsijöille</p>
           </a>
         </div>
       </div>
     </section>
 
-    <!-- Meistä -->
-    <section class="section section--alt" id="meista">
+    <!-- Miksi me -->
+    <section class="section section--gray">
       <div class="container">
-        <div class="about-grid">
-          <div class="about-grid__content">
-            <span class="section__label">Meistä</span>
-            <h2 class="section__title">Luotettavuutta ja joustavuutta</h2>
-            <p>Toimintamme kulmakiviä ovat asiakastyytyväisyys, tinkimätön ammattitaito ja rehellisyys. Hinnoittelumme on läpinäkyvää ja kilpailukykyistä.</p>
-            <p>Panostamme laadukkaisiin materiaaleihin, oikeaoppisiin asennustapoihin ja vesivahinkojen ennaltaehkäisyyn, jotta asiakkaamme voivat nukkua yönsä rauhassa.</p>
-            <ul class="check-list">
-              <li>Taloyhtiöille – huoltotyöt, vikakorjaukset ja linjasaneeraukset</li>
-              <li>Yksityisasiakkaille – joustavaa palvelua akuutteihin ja suunniteltuihin töihin</li>
-              <li>Palvelemme suomeksi, ruotsiksi ja englanniksi</li>
-              <li>Suoramyynti kuluttajille ja yrityksille</li>
-            </ul>
+        <div class="section__header section__header--center">
+          <span class="section__label">Miksi valita meidät</span>
+          <h2 class="section__title">Luotettavaa palvelua ilman arvuuttelua</h2>
+          <p class="section__desc">Panostamme laadukkaisiin materiaaleihin, oikeaoppisiin asennustapoihin ja vesivahinkojen ennaltaehkäisyyn.</p>
+        </div>
+        <div class="features-grid">
+          <div class="feature-box">
+            <div class="feature-box__num">01</div>
+            <h3>Sertifioitu ammattilainen</h3>
+            <p>Sertifikaattinumero C-24108-23-18. Luvallinen ja koulutettu tekijä jokaiseen keikkaan.</p>
           </div>
-          <div class="about-grid__cards">
-            <div class="trust-card">
-              <div class="trust-card__icon">✓</div>
-              <h3>Sertifioitu ammattilainen</h3>
-              <p>Sertifikaattinumero C-24108-23-18</p>
-            </div>
-            <div class="trust-card">
-              <div class="trust-card__icon">🏠</div>
-              <h3>Kotitalousvähennys</h3>
-              <p>Työn osuus on kotitalousvähennyskelpoista – 40 % vähennys verollisesta työn osuudesta</p>
-            </div>
-            <div class="trust-card">
-              <div class="trust-card__icon">📍</div>
-              <h3>Palvelualue</h3>
-              <p>Espoo, Helsinki ja Vantaa</p>
-            </div>
+          <div class="feature-box">
+            <div class="feature-box__num">02</div>
+            <h3>Läpinäkyvä hinnoittelu</h3>
+            <p>Selkeä työ- ja materiaalierittely. Isommista töistä sovitaan aina etukäteen.</p>
+          </div>
+          <div class="feature-box">
+            <div class="feature-box__num">03</div>
+            <h3>Kotitalousvähennys</h3>
+            <p>Työn osuus on kotitalousvähennyskelpoista – 40 % vähennys verollisesta työn osuudesta.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Google arvostelut -->
+    <section class="section" id="arvostelut">
+      <div class="container">
+        <div class="section__header section__header--center">
+          <span class="section__label">Asiakasarvostelut</span>
+          <h2 class="section__title">Mitä asiakkaamme sanovat</h2>
+        </div>
+
+        <div class="reviews-summary">
+          <div class="reviews-summary__score">
+            <div class="reviews-summary__number">5,0</div>
+            <div class="stars stars--lg" aria-label="5 tähteä 5:stä">★★★★★</div>
+            <p>3 arvostelua</p>
+            <a href="https://www.google.com/maps/search/Espoon+Putki+Saneeraus+Oy+Espoo" target="_blank" rel="noopener" class="reviews-summary__link">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+              Katso Google Mapsissa
+            </a>
+          </div>
+          <div class="reviews-summary__bars">
+            <table class="rating-table" aria-label="Arvosanojen jakauma">
+              <tbody>
+                <tr>
+                  <td>5 ★</td>
+                  <td><div class="rating-bar"><div class="rating-bar__fill" style="width:100%"></div></div></td>
+                  <td>3</td>
+                </tr>
+                <tr>
+                  <td>4 ★</td>
+                  <td><div class="rating-bar"><div class="rating-bar__fill" style="width:0%"></div></div></td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <td>3 ★</td>
+                  <td><div class="rating-bar"><div class="rating-bar__fill" style="width:0%"></div></div></td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <td>2 ★</td>
+                  <td><div class="rating-bar"><div class="rating-bar__fill" style="width:0%"></div></div></td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <td>1 ★</td>
+                  <td><div class="rating-bar"><div class="rating-bar__fill" style="width:0%"></div></div></td>
+                  <td>0</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="reviews-table-wrap">
+          <table class="reviews-table">
+            <thead>
+              <tr>
+                <th>Arvioija</th>
+                <th>Arvosana</th>
+                <th>Palvelu</th>
+                <th>Arvostelu</th>
+                <th>Päivämäärä</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Asiakas, Veikkola</td>
+                <td><span class="stars">★★★★★</span></td>
+                <td>Vessanpönttö</td>
+                <td>Hyvää jälkeä ja asiallisesti ja mutkattomasti tehtiin asiat mistä sovittiin.</td>
+                <td>05/2025</td>
+              </tr>
+              <tr>
+                <td>Asiakas, Espoo</td>
+                <td><span class="stars">★★★★★</span></td>
+                <td>Pyykinpesukoneen asennus</td>
+                <td>Pyykinpesukoneen asennus toteutui sovitussa aikataulussa ja työnjälki oli erinomaista.</td>
+                <td>09/2025</td>
+              </tr>
+              <tr>
+                <td>Asiakas, Espoo</td>
+                <td><span class="stars">★★★★★</span></td>
+                <td>Ulkovesipisteen asennus</td>
+                <td>Ulkovesipisteen asennus suoriutui ilman ongelmia 2,5 tunnissa.</td>
+                <td>09/2025</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Karuselli -->
+        <div class="testimonial-slider" id="testimonialSlider">
+          <div class="testimonial-track" id="testimonialTrack">
+            <blockquote class="testimonial-card">
+              <p>"Hyvää jälkeä ja asiallisesti ja mutkattomasti tehtiin asiat mistä sovittiin."</p>
+              <footer>Asiakas, Veikkola</footer>
+            </blockquote>
+            <blockquote class="testimonial-card">
+              <p>"Pyykinpesukoneen asennus toteutui sovitussa aikataulussa ja työnjälki oli erinomaista."</p>
+              <footer>Asiakas, Espoo</footer>
+            </blockquote>
+            <blockquote class="testimonial-card">
+              <p>"Ulkovesipisteen asennus suoriutui ilman ongelmia 2,5 tunnissa."</p>
+              <footer>Asiakas, Espoo</footer>
+            </blockquote>
+          </div>
+          <div class="testimonial-nav">
+            <button class="testimonial-btn" id="prevBtn" aria-label="Edellinen">‹</button>
+            <div class="testimonial-dots" id="testimonialDots"></div>
+            <button class="testimonial-btn" id="nextBtn" aria-label="Seuraava">›</button>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Hinnoittelu -->
-    <section class="section" id="hinnoittelu">
+    <section class="section section--gray" id="hinnoittelu">
       <div class="container">
         <div class="section__header section__header--center">
           <span class="section__label">Hinnoittelu</span>
           <h2 class="section__title">Läpinäkyvää hinnoittelua</h2>
         </div>
         <div class="pricing-grid">
-          <div class="pricing-card pricing-card--featured">
-            <div class="pricing-card__badge">Perushinta</div>
-            <div class="pricing-card__price">
-              <span class="pricing-card__amount">150 €</span>
-              <span class="pricing-card__period">minimiveloitus 2 h (sis. alv 25,5 %)</span>
-            </div>
-            <ul class="pricing-card__features">
+          <div class="pricing-card pricing-card--main">
+            <div class="pricing-card__price">150 €</div>
+            <p class="pricing-card__sub">Minimiveloitus 2 h (sis. alv 25,5 %)</p>
+            <ul>
               <li>Käytössä alkavan tunnin veloitus</li>
               <li>Tarvikkeet tukkurihinnaston mukaan</li>
               <li>Ilmainen kartoitus yli 4 tunnin töihin</li>
             </ul>
           </div>
           <div class="pricing-card">
-            <h3>Alennukset ja edut</h3>
-            <ul class="pricing-card__features">
+            <h3>Alennukset</h3>
+            <ul>
               <li>Tarvikealennus yli 8 kestävistä töistä</li>
-              <li>Mahdolliset alennukset kalusteista ja putkista tapauskohtaisesti</li>
+              <li>Alennukset kalusteista ja putkista tapauskohtaisesti</li>
               <li>Toimitus suoraan kohteeseen</li>
             </ul>
           </div>
           <div class="pricing-card">
             <h3>Kotitalousvähennys</h3>
-            <ul class="pricing-card__features">
+            <ul>
               <li>40 % vähennys verollisesta työn osuudesta</li>
               <li>Enintään 2 100 € / henkilö / vuosi</li>
               <li>Omavastuu 150 € / henkilö / vuosi</li>
@@ -243,129 +333,124 @@
     </section>
 
     <!-- Yhteystiedot -->
-    <section class="section section--alt" id="yhteystiedot">
-      <div class="container">
-        <div class="contact-grid">
-          <div class="contact-grid__info">
-            <span class="section__label">Yhteystiedot</span>
-            <h2 class="section__title">Ota yhteyttä</h2>
-            <p>Asiakaspalvelu, kartoitus, päivystys tai vesivahingon sattuessa – olemme valmiina auttamaan.</p>
-            <div class="contact-list">
-              <div class="contact-item">
-                <div class="contact-item__icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-                </div>
-                <div>
-                  <strong>Markku Määttälä</strong> – putkityöt<br>
-                  <a href="tel:0505546665">050 554 6665</a>
-                </div>
-              </div>
-              <div class="contact-item">
-                <div class="contact-item__icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-                </div>
-                <div>
-                  <strong>Jani Kemppainen</strong> – saneeraus<br>
-                  <a href="tel:0400996843">040 099 6843</a>
-                </div>
-              </div>
-              <div class="contact-item">
-                <div class="contact-item__icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                </div>
-                <div>
-                  <a href="mailto:asiakaspalvelu@espoonputki.fi">asiakaspalvelu@espoonputki.fi</a><br>
-                  <a href="mailto:markku.maattala@espoonputki.fi">markku.maattala@espoonputki.fi</a>
-                </div>
-              </div>
-              <div class="contact-item">
-                <div class="contact-item__icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                </div>
-                <div>
-                  Viherlaaksonranta 10 F 79<br>
-                  Talli e 4, 02710 Espoo
-                </div>
-              </div>
-            </div>
-            <p class="contact-meta">Y-tunnus: 3502206-6</p>
+    <section class="section" id="yhteystiedot">
+      <div class="container contact-layout">
+        <div class="contact-info">
+          <span class="section__label">Yhteystiedot</span>
+          <h2 class="section__title">Jätä yhteydenottopyyntö</h2>
+          <p>Otamme yhteyttä sinuun mahdollisimman pian. Hätätilanteissa soita suoraan päivystysnumeroon.</p>
+          <div class="contact-cards">
+            <a href="tel:0505546665" class="contact-card">
+              <strong>Markku Määttälä</strong>
+              <span>Putkityöt</span>
+              <em>050 554 6665</em>
+            </a>
+            <a href="tel:0400996843" class="contact-card">
+              <strong>Jani Kemppainen</strong>
+              <span>Saneeraus</span>
+              <em>040 099 6843</em>
+            </a>
           </div>
-          <form class="contact-form" id="contactForm">
-            <h3>Lähetä viesti</h3>
+          <div class="contact-details">
+            <p><a href="mailto:asiakaspalvelu@espoonputki.fi">asiakaspalvelu@espoonputki.fi</a></p>
+            <p>Viherlaaksonranta 10 F 79, Talli e 4<br>02710 Espoo</p>
+            <p>Y-tunnus: 3502206-6</p>
+          </div>
+        </div>
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <label for="name">Nimi</label>
+            <input type="text" id="name" name="name" required placeholder="Etunimi Sukunimi">
+          </div>
+          <div class="form-row">
             <div class="form-group">
-              <label for="name">Nimi</label>
-              <input type="text" id="name" name="name" required placeholder="Etunimi Sukunimi">
-            </div>
-            <div class="form-row">
-              <div class="form-group">
-                <label for="phone">Puhelin</label>
-                <input type="tel" id="phone" name="phone" placeholder="040 123 4567">
-              </div>
-              <div class="form-group">
-                <label for="email">Sähköposti</label>
-                <input type="email" id="email" name="email" required placeholder="nimi@email.fi">
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="service">Palvelu</label>
-              <select id="service" name="service">
-                <option value="">Valitse palvelu</option>
-                <option value="vuoto">Vuotokorjaus</option>
-                <option value="viemari">Viemärin avaus</option>
-                <option value="lvi">LVI-asennus</option>
-                <option value="lammitys">Lämmitys</option>
-                <option value="saneeraus">Saneeraus</option>
-                <option value="paivystys">Päivystys / hätätilanne</option>
-                <option value="muu">Muu</option>
-              </select>
+              <label for="phone">Puhelin</label>
+              <input type="tel" id="phone" name="phone" placeholder="040 123 4567">
             </div>
             <div class="form-group">
-              <label for="message">Viesti</label>
-              <textarea id="message" name="message" rows="4" required placeholder="Kuvaile tarpeesi lyhyesti..."></textarea>
+              <label for="email">Sähköposti</label>
+              <input type="email" id="email" name="email" required placeholder="nimi@email.fi">
             </div>
-            <button type="submit" class="btn btn--primary btn--full">Lähetä viesti</button>
-            <p class="form-note">Viesti avaa sähköpostiohjelmasi. Hätätilanteissa soita suoraan päivystysnumeroon.</p>
-          </form>
+          </div>
+          <div class="form-group">
+            <label for="service">Palvelu</label>
+            <select id="service" name="service">
+              <option value="">Valitse palvelu</option>
+              <option value="vuoto">Vuotokorjaus / päivystys</option>
+              <option value="viemari">Viemärin avaus</option>
+              <option value="lvi">LVI-asennus</option>
+              <option value="lammitys">Lämmitys</option>
+              <option value="saneeraus">Saneeraus</option>
+              <option value="muu">Muu</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Työnkuvaus</label>
+            <textarea id="message" name="message" rows="4" required placeholder="Kuvaile tarpeesi lyhyesti..."></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full btn--lg">Lähetä pyyntö</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section--gray" id="faq">
+      <div class="container container--narrow">
+        <div class="section__header section__header--center">
+          <span class="section__label">UKK</span>
+          <h2 class="section__title">Usein kysyttyä</h2>
+        </div>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>Palveletteko myös öisin ja viikonloppuisin?</summary>
+            <p>Kyllä. Tarjoamme 24/7 putkipäivystyksen akuutteihin tilanteisiin, kuten vuotoihin ja viemäritukoksiin.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Millä alueella toimitte?</summary>
+            <p>Palvelemme Espoossa, Helsingissä ja Vantaalla. Soita ja varmistamme saatavuuden alueellasi.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Voinko saada kotitalousvähennyksen?</summary>
+            <p>Kyllä, työn osuus on kotitalousvähennyskelpoista. Saat 40 % vähennyksen verollisesta työn osuudesta, enintään 2 100 € henkilöä kohden vuodessa.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Mikä on minimiveloitus?</summary>
+            <p>Minimiveloitus on 2 tuntia eli 150 € (sis. alv 25,5 %). Yli 4 tunnin töihin tarjoamme ilmaisen kartoituksen.</p>
+          </details>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="container footer__inner">
+    <div class="container footer__grid">
       <div class="footer__brand">
-        <a href="#" class="logo logo--footer">
-          <img
-            class="logo__image"
-            src="images/logo.png"
-            alt="Espoon Putki & Saneeraus Oy"
-            width="320"
-            height="80"
-          >
-        </a>
+        <img class="logo__image logo__image--footer" src="images/logo.png" alt="Espoon Putki & Saneeraus Oy" width="280" height="70">
         <p>Luotettava putkimies Espoossa, Helsingissä ja Vantaalla.</p>
+        <p class="footer__cert">Sertifikaatti C-24108-23-18</p>
       </div>
-      <div class="footer__links">
+      <div class="footer__col">
         <h4>Palvelut</h4>
         <a href="#palvelut">Vuotokorjaukset</a>
         <a href="#palvelut">Viemärin avaukset</a>
         <a href="#palvelut">LVI-asennukset</a>
         <a href="#palvelut">Saneeraus</a>
       </div>
-      <div class="footer__links">
+      <div class="footer__col">
         <h4>Yhteystiedot</h4>
         <a href="tel:0505546665">050 554 6665</a>
         <a href="tel:0400996843">040 099 6843</a>
         <a href="mailto:asiakaspalvelu@espoonputki.fi">asiakaspalvelu@espoonputki.fi</a>
       </div>
-      <div class="footer__cert">
-        <p>Sertifikaatti C-24108-23-18</p>
+      <div class="footer__col">
+        <h4>Yritys</h4>
         <p>Y-tunnus 3502206-6</p>
+        <p>Viherlaaksonranta 10 F 79<br>02710 Espoo</p>
       </div>
     </div>
     <div class="footer__bottom">
       <div class="container">
-        <p>&copy; 2026 Espoon Putki & Saneeraus Oy. Kaikki oikeudet pidätetään.</p>
+        <p>&copy; 2026 Espoon Putki & Saneeraus Oy</p>
       </div>
     </div>
   </footer>
